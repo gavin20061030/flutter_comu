@@ -14,8 +14,7 @@ class MainView extends GetView<MainController> {
         title: Obx(() => Text(controller.title.value)),
       ),
       body: SafeArea(
-          child:
-          Obx(() => RouteInfo.navBarPages[controller.navBarIdx.value]),
+        child: Obx(() => RouteInfo.navBarPages[controller.navBarIdx.value]),
         /*child: PageTransitionSwitcher(
             transitionBuilder: (Widget child, Animation<double> anim,
                 Animation<double> secondAnim) {
@@ -25,8 +24,7 @@ class MainView extends GetView<MainController> {
                 child: child,
               );
             },
-            child:
-                Obx(() => RouteInfo.navBarPages[controller.navBarIdx.value])),*/
+            child: Obx(() => RouteInfo.navBarPages[controller.navBarIdx.value])),*/
       ),
       bottomNavigationBar: Obx(() => NavigationBar(
             selectedIndex: controller.navBarIdx.value,

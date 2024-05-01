@@ -1,0 +1,3 @@
+enum CodeInfo {
+  ok,err
+}
