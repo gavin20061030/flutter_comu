@@ -1,4 +1,5 @@
 import 'package:comu/controller/main_controller.dart';
+import 'package:comu/route/route_info.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,8 +13,26 @@ class MainView extends GetView<MainController> {
         title: Obx(() => Text(controller.title.value)),
       ),
       body: SafeArea(
-        child: SizedBox(),
+        child: Obx(()=> RouteInfo.navBarPages[controller.navBarIdx.value]),
       ),
+      bottomNavigationBar: Obx( () => NavigationBar(
+        selectedIndex: controller.navBarIdx.value,
+        onDestinationSelected: controller.onChangeNavBar,
+        destinations: [
+          NavigationDestination(
+            icon: const Icon(Icons.home_filled),
+            label: 'navBar.home'.tr,
+          ),
+          NavigationDestination(
+            icon: const Icon(Icons.list_alt),
+            label: 'navBar.post'.tr,
+          ),
+          NavigationDestination(
+            icon: const Icon(Icons.photo),
+            label: 'navBar.photo'.tr,
+          ),
+        ],
+      )),
     );
   }
 }

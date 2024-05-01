@@ -9,16 +9,22 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   cupertino_icons: ^1.0.2
   get: ^4.6.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^2.0.0
 
 flutter:
-
   uses-material-design: true
+  fonts:
+    - family: NanumGothic
+      fonts:
+        - asset: assets/font/NanumGothic-Regular.ttf
+          weight: 400
+        - asset: assets/font/NanumGothic-Bold.ttf
+          weight: 700
+        - asset: assets/font/NanumGothic-ExtraBold.ttf
+          weight: 800
