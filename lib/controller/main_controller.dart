@@ -7,8 +7,7 @@ class MainController extends GetxController {
 
   void onChangeNavBar(int idx) {
     if (navBarIdx.value != idx) {
-      navBarIdx.value = idx;
-
+      navBarIdx(idx);
       switch (idx) {
         case 1:
           title('post.title'.tr);

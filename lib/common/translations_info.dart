@@ -11,7 +11,10 @@ class TranslationsInfo extends Translations {
 
     'navBar.home': 'Home',
     'navBar.post': 'Post',
-    'navBar.photo': 'Photo'
+    'navBar.photo': 'Photo',
+    'home.card.1': 'Build apps for any screen',
+    'home.card.2': 'Ship features faster with less code while targeting Android, iOS, web, Windows, macOS, and Linux in a single codebase.',
+    'home.card.3': 'Ship features faster with less code while targeting Android, iOS, web, Windows, macOS, and Linux in a single codebase.',
   };
 
   final Map<String, String> ko = {
@@ -21,6 +24,11 @@ class TranslationsInfo extends Translations {
 
     'navBar.home': '홈',
     'navBar.post': '포스트',
-    'navBar.photo': '사진첩'
+    'navBar.photo': '사진첩',
+
+
+    'home.card.1': 'Build apps for any screen',
+    'home.card.2': 'Ship features faster with less code while targeting Android, iOS, web, Windows, macOS, and Linux in a single codebase.',
+    'home.card.3': 'Ship features faster with less code while targeting Android, iOS, web, Windows, macOS, and Linux in a single codebase.',
   };
 }
