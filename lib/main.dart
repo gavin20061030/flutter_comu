@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:comu/bind/init_bind.dart';
+import 'package:comu/common/const.dart';
 import 'package:comu/common/translations_info.dart';
 import 'package:comu/route/route_info.dart';
 import 'package:flutter/material.dart';
@@ -27,11 +28,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           colorScheme: const ColorScheme.light(),
           useMaterial3: true,
-          fontFamily: 'NanumGothic'),
+          fontFamily: gFont),
       darkTheme: ThemeData(
           colorScheme: const ColorScheme.dark(),
           useMaterial3: true,
-          fontFamily: 'NanumGothic'),
+          fontFamily: gFont),
       debugShowCheckedModeBanner: false,
     );
   }

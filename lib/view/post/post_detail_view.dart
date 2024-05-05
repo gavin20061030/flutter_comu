@@ -1,3 +1,4 @@
+import 'package:comu/common/const.dart';
 import 'package:comu/controller/post_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,7 +21,7 @@ class PostDetailView extends GetView<PostController> {
   Widget _detail() {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(gPadding),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

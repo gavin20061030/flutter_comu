@@ -1,5 +1,6 @@
 import 'package:comu/api/api_info.dart';
 import 'package:comu/common/code_info.dart';
+import 'package:comu/common/const.dart';
 import 'package:comu/dto/post_bean.dart';
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/request/request.dart';
@@ -12,9 +13,9 @@ class PostDao extends GetConnect {
   @override
   void onInit() {
     httpClient.baseUrl = ApiInfo.rootPostUrl;
-    httpClient.defaultContentType = 'application/x-www-form-urlencoded';
+    httpClient.defaultContentType = gHttpContentType;
     httpClient.addRequestModifier((Request request) {
-      request.headers['Accept'] = 'application/json';
+      request.headers[gHttpHeaderAccept] = gHttpHeaderAcceptJson;
       return request;
     });
   }
@@ -35,8 +36,8 @@ class PostDao extends GetConnect {
     } catch (e) {
       code = CodeInfo.err;
     }
-    resultMap['code'] = code;
-    resultMap['list'] = list;
+    resultMap[gCode] = code;
+    resultMap[gList] = list;
     return resultMap;
   }
 
@@ -54,8 +55,8 @@ class PostDao extends GetConnect {
     } catch (e) {
       code = CodeInfo.err;
     }
-    resultMap['code'] = code;
-    resultMap['bean'] = postBean;
+    resultMap[gCode] = code;
+    resultMap[gBean] = postBean;
     return resultMap;
   }
 }

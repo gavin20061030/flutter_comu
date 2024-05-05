@@ -1,3 +1,4 @@
+import 'package:comu/common/const.dart';
 import 'package:comu/component/loading_widget.dart';
 import 'package:comu/controller/home_controller.dart';
 import 'package:flutter/material.dart';
@@ -15,9 +16,9 @@ class HomeView extends GetView<HomeController> {
           Column(
             children: [
               Card(
-                  margin: const EdgeInsets.all(16.0),
+                  margin: const EdgeInsets.all(gMargin),
                   child: Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.all(gPadding),
                     child: Row(children: [
                       Image.asset(
                         'assets/img/flutter.png',
@@ -28,9 +29,9 @@ class HomeView extends GetView<HomeController> {
                     ]),
                   )),
               Card(
-                margin: const EdgeInsets.all(16.0),
+                margin: const EdgeInsets.all(gMargin),
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(gPadding),
                   child: SizedBox(
                     width: double.infinity,
                     child: Column(
@@ -44,9 +45,9 @@ class HomeView extends GetView<HomeController> {
                 ),
               ),
               Card(
-                margin: const EdgeInsets.all(16.0),
+                margin: const EdgeInsets.all(gMargin),
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(gPadding),
                   child: SizedBox(
                     width: double.infinity,
                     child: Column(

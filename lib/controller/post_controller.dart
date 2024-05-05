@@ -1,4 +1,5 @@
 import 'package:comu/common/code_info.dart';
+import 'package:comu/common/const.dart';
 import 'package:comu/dao/post_dao.dart';
 import 'package:comu/dto/post_bean.dart';
 import 'package:comu/route/route_info.dart';
@@ -16,13 +17,17 @@ class PostController extends GetxController {
     _getPosts();
   }
 
+  void onRefresh() {
+    _getPosts();
+  }
+
   Future<void> _getPosts() async {
     isLoading(true);
     try {
       Map<String, dynamic> result = await PostDao.to.getPosts();
-      CodeInfo code = result['code'];
+      CodeInfo code = result[gCode];
       if (code == CodeInfo.ok) {
-        List<PostBean> list = result['list'];
+        List<PostBean> list = result[gList];
         posts.clear();
         posts.addAll(list);
       }
@@ -36,8 +41,8 @@ class PostController extends GetxController {
     isLoading(true);
     try {
       Map<String, dynamic> result = await PostDao.to.getPost(id);
-      CodeInfo code = result['code'];
-      PostBean bean = result['bean'];
+      CodeInfo code = result[gCode];
+      PostBean bean = result[gBean];
       if (code == CodeInfo.ok && bean.id > 0) {
         postDetail(bean);
         Get.toNamed(RouteInfo.routePostDetail);
